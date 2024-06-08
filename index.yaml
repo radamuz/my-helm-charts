@@ -3,7 +3,17 @@ entries:
   oracle19:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-06-08T19:17:04.930544433+02:00"
+    created: "2024-06-08T19:20:24.811342462+02:00"
+    description: A Helm chart for Kubernetes
+    digest: 23203e6c2a9af1a247d9ce8f65a9e0d37716aa80a2081808c1cf78e3e20943aa
+    name: oracle19
+    type: application
+    urls:
+    - releases/oracle19-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-06-08T19:20:24.811085454+02:00"
     description: A Helm chart for Kubernetes
     digest: a34c7d5a26eaf87ca9f75374442b0fa9d1ad9ec54ac133dee4378e991d8d79c0
     name: oracle19
@@ -13,7 +23,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-06-08T19:17:04.930249845+02:00"
+    created: "2024-06-08T19:20:24.810807658+02:00"
     description: A Helm chart for Kubernetes
     digest: f2de52ca3ad4f2ee4fef66b0895a568422f3d0e34a86daab806c70cd0f2e1111
     name: oracle19
@@ -23,7 +33,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-06-08T19:17:04.929959203+02:00"
+    created: "2024-06-08T19:20:24.810445204+02:00"
     description: A Helm chart for Kubernetes
     digest: a281cc8bd6ba2dcb3672aa40ed4540b96bf53a9610747c8f5319dc2543a0d460
     name: oracle19
@@ -31,4 +41,4 @@ entries:
     urls:
     - releases/oracle19-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-08T19:17:04.929570147+02:00"
+generated: "2024-06-08T19:20:24.810020887+02:00"
