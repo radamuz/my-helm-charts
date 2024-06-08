@@ -78,6 +78,9 @@ autoscaling:
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
 
+deployment:
+  create: false
+
 # Additional volumes on the output Deployment definition.
 volumes: []
 # - name: foo
