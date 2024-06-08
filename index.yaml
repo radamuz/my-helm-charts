@@ -3,12 +3,22 @@ entries:
   oracle19:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-06-08T14:40:06.412338115+02:00"
+    created: "2024-06-08T18:52:29.400136777+02:00"
     description: A Helm chart for Kubernetes
-    digest: 28804b424d91eeff8f3ded74f0efee8320d9e9738ba46328a17077a54e8d8f80
+    digest: f2de52ca3ad4f2ee4fef66b0895a568422f3d0e34a86daab806c70cd0f2e1111
+    name: oracle19
+    type: application
+    urls:
+    - releases/oracle19-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-06-08T18:52:29.399868053+02:00"
+    description: A Helm chart for Kubernetes
+    digest: a281cc8bd6ba2dcb3672aa40ed4540b96bf53a9610747c8f5319dc2543a0d460
     name: oracle19
     type: application
     urls:
     - releases/oracle19-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-08T14:40:06.411913731+02:00"
+generated: "2024-06-08T18:52:29.399486252+02:00"
