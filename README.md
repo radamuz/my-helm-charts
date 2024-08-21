@@ -8,6 +8,8 @@ cd releases
 
 helm package ../oracle19/
 
+cd ..
+
 helm repo index .
 
 helm repo add radamuz-helm-charts https://radamuz.github.io/my-helm-charts
