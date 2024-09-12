@@ -1,6 +1,14 @@
-export KUBECONFIG=~/repos/general/conexiones/.kube/k5.sm2.internal.yml
+# radamuz/my-helm-charts
 
-helm create oracle19
+* Configurar Kubeconfig para conectar a clúster de Kubernetes:
+```bash
+export KUBECONFIG=~/repos/general/conexiones/.kube/k5.sm2.internal.yml
+```
+
+* Crear ficheros de Helm para comenzar a desarrollar un nuevo paquete:
+```bash
+helm create filestash
+```
 
 helm package oracle19
 
