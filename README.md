@@ -30,10 +30,20 @@ helm repo update
 
 * Instalar filestash:
 ```bash
-helm upgrade --install filestash radamuz-helm-charts/filestash
+helm upgrade --install --create-namespace -n filestash filestash radamuz-helm-charts/filestash
 ```
 
-* Eliminar filestash:
+* Instalar filestash con valores de ejemplo:
+```bash
+helm upgrade --values values/filestash-values-example.yaml --install --create-namespace -n filestash filestash radamuz-helm-charts/filestash
+```
+
+* Desinstalar filestash:
+```bash
+helm uninstall filestash
+```
+
+* Eliminar repositorio de Helm radamuz-helm-charts:
 ```bash
 helm repo remove my-helm-charts
 ```

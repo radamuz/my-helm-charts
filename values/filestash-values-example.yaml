@@ -1,0 +1,8 @@
+ingress:
+  enabled: true
+  className: traefik
+  hosts:
+    - host: "filestash.k5.sm2.internal"
+      paths:
+        - path: /
+          pathType: Prefix
