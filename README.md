@@ -35,7 +35,7 @@ helm upgrade --install --create-namespace -n filestash filestash radamuz-helm-ch
 
 * Instalar filestash con valores de ejemplo:
 ```bash
-helm upgrade --values values/filestash-values-example.yaml --install --create-namespace -n filestash filestash radamuz-helm-charts/filestash
+helm upgrade --version "0.1.1" --values values/filestash-values-example.yaml --install --create-namespace -n filestash filestash radamuz-helm-charts/filestash
 ```
 
 * Desinstalar filestash:
