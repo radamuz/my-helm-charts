@@ -10,20 +10,30 @@ export KUBECONFIG=~/repos/general/conexiones/.kube/k5.sm2.internal.yml
 helm create filestash
 ```
 
-helm package oracle19
-
+* Empaquetar ficheros de filestash para lograr que helm lo pueda descargar al instalar filestash con helm:
+```bash
 cd releases
-
-helm package ../oracle19/
-
+helm package ../filestash
 cd ..
+```
 
+* Actualizar índice para que Helm sepa donde están ubicados los paquetes y tener controladas las versiones de estos:
+```bash
 helm repo index .
+```
 
+* Añadir repo a helm y actualizarlo con las últimas versiones a través del índice subido:
+```bash
 helm repo add radamuz-helm-charts https://radamuz.github.io/my-helm-charts
-
-helm repo remove my-helm-charts
-
 helm repo update
+```
 
-helm install oracle19 radamuz-helm-charts/oracle19
+* Instalar filestash:
+```bash
+helm upgrade --install filestash radamuz-helm-charts/filestash
+```
+
+* Eliminar filestash:
+```bash
+helm repo remove my-helm-charts
+```
