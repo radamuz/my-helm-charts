@@ -96,3 +96,11 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+onlyoffice:
+  replicaCount: 1
+  service:
+    port: 8081
+  serviceAccount:
+    create: true
+    name: onlyoffice-sa

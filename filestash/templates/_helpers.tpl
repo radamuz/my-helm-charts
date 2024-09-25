@@ -60,3 +60,57 @@ Create the name of the service account to use
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
 {{- end }}
+
+{{/*
+Expand the name of the second deployment (filestash-onlyoffice).
+*/}}
+{{- define "filestash-onlyoffice.name" -}}
+{{- default .Chart.Name .Values.onlyoffice.nameOverride | trunc 63 | trimSuffix "-" }}
+{{- end }}
+
+{{/*
+Create a default fully qualified app name for the second deployment.
+*/}}
+{{- define "filestash-onlyoffice.fullname" -}}
+{{- if .Values.onlyoffice.fullnameOverride }}
+{{- .Values.onlyoffice.fullnameOverride | trunc 63 | trimSuffix "-" }}
+{{- else }}
+{{- $name := default .Chart.Name .Values.onlyoffice.nameOverride }}
+{{- if contains $name .Release.Name }}
+{{- .Release.Name | trunc 63 | trimSuffix "-" }}
+{{- else }}
+{{- printf "%s-%s" .Release.Name $name | trunc 63 | trimSuffix "-" }}
+{{- end }}
+{{- end }}
+{{- end }}
+
+{{/*
+Common labels for the second deployment.
+*/}}
+{{- define "filestash-onlyoffice.labels" -}}
+helm.sh/chart: {{ include "filestash.chart" . }}
+{{ include "filestash-onlyoffice.selectorLabels" . }}
+{{- if .Chart.AppVersion }}
+app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
+{{- end }}
+app.kubernetes.io/managed-by: {{ .Release.Service }}
+{{- end }}
+
+{{/*
+Selector labels for the second deployment.
+*/}}
+{{- define "filestash-onlyoffice.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "filestash-onlyoffice.name" . }}
+app.kubernetes.io/instance: {{ .Release.Name }}
+{{- end }}
+
+{{/*
+Create the name of the service account to use for the second deployment.
+*/}}
+{{- define "filestash-onlyoffice.serviceAccountName" -}}
+{{- if .Values.onlyoffice.serviceAccount.create }}
+{{- default (include "filestash-onlyoffice.fullname" .) .Values.onlyoffice.serviceAccount.name }}
+{{- else }}
+{{- default "default" .Values.onlyoffice.serviceAccount.name }}
+{{- end }}
+{{- end }}

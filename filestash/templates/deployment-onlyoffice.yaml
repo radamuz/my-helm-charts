@@ -1,44 +1,44 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "filestash.fullname" . }}-onlyoffice
+  name: {{ include "filestash-onlyoffice.fullname" . }}
   labels:
-    {{- include "filestash.labels" . | nindent 4 }}
+    {{- include "filestash-onlyoffice.labels" . | nindent 4 }}
 spec:
-  {{- if not .Values.autoscaling.enabled }}
-  replicas: {{ .Values.replicaCount }}
+  {{- if not .Values.onlyoffice.autoscaling.enabled }}
+  replicas: {{ .Values.onlyoffice.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "filestash.selectorLabels" . | nindent 6 }}
+      {{- include "filestash-onlyoffice.selectorLabels" . | nindent 6 }}
   template:
     metadata:
-      {{- with .Values.podAnnotations }}
+      {{- with .Values.onlyoffice.podAnnotations }}
       annotations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "filestash.labels" . | nindent 8 }}
-	{{- with .Values.podLabels }}
+        {{- include "filestash-onlyoffice.labels" . | nindent 8 }}
+	{{- with .Values.onlyoffice.podLabels }}
         {{- toYaml . | nindent 8 }}
         {{- end }}
     spec:
-      {{- with .Values.imagePullSecrets }}
+      {{- with .Values.onlyoffice.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "filestash.serviceAccountName" . }}
+      serviceAccountName: {{ include "filestash-onlyoffice.serviceAccountName" . }}
       securityContext:
-        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+        {{- toYaml .Values.onlyoffice.podSecurityContext | nindent 8 }}
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
-            {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+            {{- toYaml .Values.onlyoffice.securityContext | nindent 12 }}
+          image: "{{ .Values.onlyoffice.image.repository }}:{{ .Values.onlyoffice.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.onlyoffice.image.pullPolicy }}
           ports:
             - name: http
-              containerPort: {{ .Values.service.port }}
+              containerPort: {{ .Values.onlyoffice.service.port }}
               protocol: TCP
           livenessProbe:
             httpGet:
@@ -49,24 +49,24 @@ spec:
               path: /
               port: http
           resources:
-            {{- toYaml .Values.resources | nindent 12 }}
-          {{- with .Values.volumeMounts }}
+            {{- toYaml .Values.onlyoffice.resources | nindent 12 }}
+          {{- with .Values.onlyoffice.volumeMounts }}
           volumeMounts:
             {{- toYaml . | nindent 12 }}
           {{- end }}
-      {{- with .Values.volumes }}
+      {{- with .Values.onlyoffice.volumes }}
       volumes:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      {{- with .Values.nodeSelector }}
+      {{- with .Values.onlyoffice.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      {{- with .Values.affinity }}
+      {{- with .Values.onlyoffice.affinity }}
       affinity:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      {{- with .Values.tolerations }}
+      {{- with .Values.onlyoffice.tolerations }}
       tolerations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
