@@ -32,6 +32,8 @@ cd ..
 helm repo index .
 ```
 
+* Hacer commit y push para que se actualice el remoto y así se pueda descargar el repo de Helm en un cluster de Kubernetes.
+
 * Añadir repo a helm y actualizarlo con las últimas versiones a través del índice subido:
 ```bash
 helm repo add radamuz-helm-charts https://radamuz.github.io/my-helm-charts
