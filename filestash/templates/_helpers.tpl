@@ -62,6 +62,13 @@ Create the name of the service account to use
 {{- end }}
 
 {{/*
+Create a name for the second deployment (onlyoffice).
+*/}}
+{{- define "filestash-onlyoffice.name" -}}
+{{- default (printf "%s-onlyoffice" .Chart.Name) .Values.onlyoffice.nameOverride | trunc 63 | trimSuffix "-" }}
+{{- end }}
+
+{{/*
 Create a default fully qualified app name for the second deployment.
 */}}
 {{- define "filestash-onlyoffice.fullname" -}}
