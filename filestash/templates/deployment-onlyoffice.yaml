@@ -40,14 +40,6 @@ spec:
             - name: http
               containerPort: {{ .Values.onlyoffice.service.port }}
               protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
           resources:
             {{- toYaml .Values.onlyoffice.resources | nindent 12 }}
           {{- with .Values.onlyoffice.volumeMounts }}
