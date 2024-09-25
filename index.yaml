@@ -3,7 +3,17 @@ entries:
   filestash:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-09-25T13:54:35.365616483+02:00"
+    created: "2024-09-25T15:24:56.23506326+02:00"
+    description: A Helm chart for Kubernetes
+    digest: 5c036860eadbe77ae7222338dc9de083d212294d51d25120192ff7dcd78a7dc6
+    name: filestash
+    type: application
+    urls:
+    - releases/filestash-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-09-25T15:24:56.234736283+02:00"
     description: A Helm chart for Kubernetes
     digest: c779247e463a2ec682cc33a6516ef99ede047a62e1962ebb08f33865dde636ec
     name: filestash
@@ -13,7 +23,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-09-25T13:54:35.365310211+02:00"
+    created: "2024-09-25T15:24:56.234158887+02:00"
     description: A Helm chart for Kubernetes
     digest: f2beb3e9606cfea3999e569dfefec81618d29f56f0bda9faec19d9a850793fbf
     name: filestash
@@ -23,7 +33,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-09-25T13:54:35.364695611+02:00"
+    created: "2024-09-25T15:24:56.233517638+02:00"
     description: A Helm chart for Kubernetes
     digest: d3f4d2a6a54f58c32bd7548a5f510e45da08150394a8cf1276e780c1983aad11
     name: filestash
@@ -34,7 +44,7 @@ entries:
   oracle19:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-09-25T13:54:35.368434727+02:00"
+    created: "2024-09-25T15:24:56.23851458+02:00"
     description: A Helm chart for Kubernetes
     digest: 7336f1338ad0ec5e1d464d95bb00dbb0b6cccf42304deab59fd577fb387d48fc
     name: oracle19
@@ -44,7 +54,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-09-25T13:54:35.367890329+02:00"
+    created: "2024-09-25T15:24:56.237894426+02:00"
     description: A Helm chart for Kubernetes
     digest: c01433526dd6386b6c20669804ec6c44f1ecb56656f20082e0f60c13dc8467aa
     name: oracle19
@@ -54,7 +64,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-09-25T13:54:35.367272317+02:00"
+    created: "2024-09-25T15:24:56.23724231+02:00"
     description: A Helm chart for Kubernetes
     digest: a34c7d5a26eaf87ca9f75374442b0fa9d1ad9ec54ac133dee4378e991d8d79c0
     name: oracle19
@@ -64,7 +74,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-09-25T13:54:35.366712957+02:00"
+    created: "2024-09-25T15:24:56.236546051+02:00"
     description: A Helm chart for Kubernetes
     digest: f2de52ca3ad4f2ee4fef66b0895a568422f3d0e34a86daab806c70cd0f2e1111
     name: oracle19
@@ -74,7 +84,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-09-25T13:54:35.36616237+02:00"
+    created: "2024-09-25T15:24:56.235889882+02:00"
     description: A Helm chart for Kubernetes
     digest: a281cc8bd6ba2dcb3672aa40ed4540b96bf53a9610747c8f5319dc2543a0d460
     name: oracle19
@@ -82,4 +92,4 @@ entries:
     urls:
     - releases/oracle19-0.1.0.tgz
     version: 0.1.0
-generated: "2024-09-25T13:54:35.362633016+02:00"
+generated: "2024-09-25T15:24:56.231651998+02:00"
