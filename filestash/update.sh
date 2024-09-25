@@ -29,9 +29,9 @@ sed -i "s/$antigua_version/$nueva_version/" "$archivo"
 
 # Define el archivo y la línea a buscar
 archivo="README.md"
-linea_a_buscar="version \"0.1.8\""
+linea_a_buscar="\-\-version"
 
-# Busca la línea que contiene "--version \"0.1.8\""
+# Busca la línea que contiene "--version"
 version_line=$(grep "$linea_a_buscar" "$archivo")
 
 # Extrae la versión usando cut para tomar la segunda parte (después de "version:")
