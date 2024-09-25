@@ -107,8 +107,8 @@ onlyoffice:
     targetCPUUtilizationPercentage: 80
   
   image:
-    repository: your-repository
-    tag: "your-tag"
+    repository: onlyoffice/documentserver
+    tag: "7.1"
     pullPolicy: IfNotPresent
 
   service:

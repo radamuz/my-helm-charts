@@ -31,7 +31,7 @@ spec:
       securityContext:
         {{- toYaml .Values.onlyoffice.podSecurityContext | nindent 8 }}
       containers:
-        - name: {{ .Chart.Name }}
+        - name: {{ include "filestash-onlyoffice.fullname" . }}
           securityContext:
             {{- toYaml .Values.onlyoffice.securityContext | nindent 12 }}
           image: "{{ .Values.onlyoffice.image.repository }}:{{ .Values.onlyoffice.image.tag | default .Chart.AppVersion }}"
