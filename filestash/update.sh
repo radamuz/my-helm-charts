@@ -9,3 +9,5 @@ helm repo index .
 git add .
 
 git commit -m "Update"
+
+git push --all
